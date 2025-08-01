@@ -2,679 +2,603 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vehimovil - Asistencia Digital para Trámites Vehiculares en México</title>
-    <meta name="description" content="Servicio privado de asistencia digital para trámites vehiculares en México. Consulta multas, restricciones y opciones de pago de forma clara y eficiente.">
-    <meta name="keywords" content="trámites vehiculares, multas, restricciones, pago parcial, México, asistencia digital">
-    <meta name="author" content="Vehimovil">
-    <meta name="robots" content="index, follow">
-        
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="./assets/css/styles.css" as="style">
-    <link href="./assets/css/styles.css" rel="stylesheet">
-    
-    <!-- Performance optimizations -->
-    <script src="./assets/js/performance.js" defer></script>
-    <script src="./assets/js/analytics.js" defer></script>
-    
-    <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#0F111A">
-    <meta name="msapplication-TileColor" content="#0F111A">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehimovil - Consulta tu vehículo sin complicaciones</title>
+    <meta name="description" content="Revisa multas, restricciones y estado administrativo de tu vehículo. Servicio privado sin filas ni trámites presenciales.">
+    <link rel="stylesheet" href="dist/output.css">
 </head>
-            <body class="bg-dark-primary text-primary font-sans">
+<body class="font-sans">
     <!-- Header -->
-    <header class="bg-dark-secondary/95 backdrop-blur-sm border-b border-dark-border sticky top-0 z-50 shadow-lg">
-        <div class="container py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4 md:space-x-8">
-                    <a href="/" class="text-xl md:text-2xl font-bold text-accent">vehimovil.com</a>
-                    <nav class="hidden md:flex space-x-6 lg:space-x-8">
-                        <a href="/" class="nav-link">Inicio</a>
-                        <a href="#servicios" class="nav-link">Servicios</a>
-                        <a href="#como-trabajamos" class="nav-link">¿Cómo trabajamos?</a>
-                        <a href="#contacto" class="nav-link">Contacto</a>
-                    </nav>
-                </div>
+    <header class="bg-primary text-white py-4">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between items-center">
+                <div class="text-xl sm:text-2xl font-bold">Vehimovil</div>
                 
-                <!-- Desktop CTA -->
-                <div class="hidden md:block">
-                    <a href="#servicios" class="btn-primary">
-                        Empezar con mi trámite
-                    </a>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-primary hover:text-accent transition-colors">
+                <!-- Menu Button (Always visible) -->
+                <button id="mobile-menu-button" class="text-white hover:text-accent-yellow transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-            </div>
-            
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-dark-border">
-                <nav class="flex flex-col space-y-4 mt-4">
-                    <a href="/" class="nav-link text-lg">Inicio</a>
-                    <a href="#servicios" class="nav-link text-lg">Servicios</a>
-                    <a href="#como-trabajamos" class="nav-link text-lg">¿Cómo trabajamos?</a>
-                    <a href="#contacto" class="nav-link text-lg">Contacto</a>
-                    <div class="pt-4">
-                        <a href="#servicios" class="btn-primary w-full text-center">
-                            Empezar con mi trámite
-                        </a>
-                    </div>
-                </nav>
+            </nav>
+
+            <!-- Menu (Always hidden by default) -->
+            <div id="mobile-menu" class="hidden mt-4 pb-4 border-t border-white/20">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#servicios" class="hover:text-accent-yellow transition-colors py-2">Servicios</a>
+                    <a href="#como-trabajamos" class="hover:text-accent-yellow transition-colors py-2">Cómo trabajamos</a>
+                    <a href="contacto.html" class="hover:text-accent-yellow transition-colors py-2">Contacto</a>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="py-12 md:py-16 lg:py-20 hero-gradient">
-        <div class="container">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+    <section class="bg-primary text-white py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div class="text-center lg:text-left">
-                    <h1 class="hero-title">
-                        Soluciones digitales para tus trámites vehiculares en México
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
+                        ¿Tu auto tiene restricciones que aún no conoces?
                     </h1>
-                    <p class="hero-subtitle">
-                        ¿Multas? ¿Restricciones para vender tu auto? ¿Pagos en parcialidades?<br class="hidden sm:block">
-                        Nosotros te acompañamos paso a paso.
-                    </p>
-                    
-                    <a href="#servicios" class="hero-cta-button">
-                        Consultar mi situación vehicular
-                        <svg class="w-4 h-4 md:w-5 md:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
+                    <h2 class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 lg:mb-8 text-gray-200">
+                        Multas activas, bloqueos legales o convenios olvidados. Te ayudamos a revisarlo, sin filas ni complicaciones.
+                    </h2>
+                    <button onclick="scrollToSection('servicios')" class="btn-primary text-base sm:text-lg w-full sm:w-auto">
+                        Ver mis opciones ahora
+                    </button>
                 </div>
-                <div class="flex flex-col items-center lg:items-start">
-                    <div class="relative mb-6 lg:mb-8">
-                        <div class="w-64 h-64 md:w-80 md:h-80 accent-gradient rounded-full opacity-20"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-32 h-32 md:w-48 md:h-48 text-primary opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <!-- Trust Block -->
-                    <div class="trust-block w-full max-w-md">
-                        <p class="trust-title">No somos una institución pública.</p>
-                        <p class="trust-text">
-                            Somos una empresa digital independiente que te ayuda a gestionar tus trámites de forma clara y eficiente.
-                        </p>
-                        <p class="trust-text">
-                            Puedes hacerlo por tu cuenta, pero si prefieres evitar errores o pérdidas de tiempo, estamos aquí para ayudarte.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ¿Qué hacemos? Section -->
-    <section class="py-12 md:py-16 lg:py-20 bg-dark-secondary">
-        <div class="container">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="section-title">¿Qué hacemos?</h2>
-                <p class="section-subtitle">
-                    Ofrecemos asistencia digital privada para quienes desean simplificar la gestión de trámites relacionados con su vehículo. Nuestro servicio consiste en recopilar los datos necesarios que tú nos brindas, procesarlos internamente y entregarte los resultados o instrucciones de forma clara, rápida y por medios digitales.
-                </p>
-            </div>
-            
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                            <div class="text-center">
-                                <div class="icon-container accent-gradient">
-                                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3">Trato claro y directo</h3>
-                                <p class="text-secondary">Te explicamos exactamente qué hacemos y cómo lo hacemos, sin promesas falsas.</p>
-                            </div>
-                            
-                            <div class="text-center">
-                                <div class="icon-container accent-gradient">
-                                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3">Ahorra tiempo y esfuerzo</h3>
-                                <p class="text-secondary">Evita filas, citas y trámites presenciales. Todo desde la comodidad de tu casa.</p>
-                            </div>
-                            
-                            <div class="text-center">
-                                <div class="icon-container accent-gradient">
-                                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3">Todo desde tu casa</h3>
-                                <p class="text-secondary">Proceso 100% digital. Recibe tus resultados por email sin moverte de casa.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-    <!-- Servicios Section -->
-    <section id="servicios" class="py-12 md:py-16 lg:py-20 bg-dark-primary">
-        <div class="container">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="section-title">Nuestros Servicios</h2>
-                <p class="section-subtitle">Soluciones específicas para tus necesidades vehiculares más importantes</p>
-            </div>
-            
-            <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 max-w-7xl mx-auto">
-                            <!-- Servicio 1 -->
-                            <div class="service-card group hover-lift">
-                                <div class="text-center mb-8">
-                                    <div class="icon-container red-gradient icon-hover mb-6">
-                                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-primary">¿Tienes multas activas? Lo revisamos por ti</h3>
-                                </div>
-                                
-                                <div class="space-y-6">
-                                    <p class="text-secondary text-sm md:text-base leading-relaxed">
-                                        Te ayudamos a recopilar información sobre posibles infracciones asociadas a tu vehículo y te entregamos un resumen con los detalles clave.
-                                    </p>
-                                    
-                                    <div class="notice-box notice-yellow">
-                                        <p class="text-sm font-medium">📌 Importante:</p>
-                                        <p class="text-sm mt-2">No modificamos ni eliminamos tus multas. Solo te ayudamos a consultarlas de forma segura y correcta.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="mt-8 text-center">
-                                    <a href="/multas.html" class="service-button red-gradient">
-                                        Revisar posibles multas
-                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                                            <!-- Servicio 2 -->
-                            <div class="service-card group hover-lift">
-                                <div class="text-center mb-8">
-                                    <div class="icon-container yellow-gradient icon-hover mb-6">
-                                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-primary">¿Quieres vender tu auto? Verificamos si hay bloqueos</h3>
-                                </div>
-                                
-                                <div class="space-y-6">
-                                    <p class="text-secondary text-sm md:text-base leading-relaxed">
-                                        Te informamos si tu vehículo presenta adeudos o restricciones que podrían impedir su venta o traspaso.
-                                    </p>
-                                    
-                                    <div class="notice-box notice-blue">
-                                        <p class="text-sm font-medium">📌 Importante:</p>
-                                        <p class="text-sm mt-2">No somos autoridad. Te ayudamos a verificar esta información antes de acudir a cualquier dependencia.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="mt-8 text-center">
-                                    <a href="/restricciones.html" class="service-button yellow-gradient">
-                                        Verificar estado legal del auto
-                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                                            <!-- Servicio 3 -->
-                            <div class="service-card group hover-lift">
-                                <div class="text-center mb-8">
-                                    <div class="icon-container green-gradient icon-hover mb-6">
-                                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-primary">¿Puedes pagar tus multas en parcialidades? Averígualo</h3>
-                                </div>
-                                
-                                <div class="space-y-6">
-                                    <p class="text-secondary text-sm md:text-base leading-relaxed">
-                                        Te guiamos para saber si tienes derecho a facilidades de pago y cómo solicitarlas paso a paso.
-                                    </p>
-                                    
-                                    <div class="notice-box notice-green">
-                                        <p class="text-sm font-medium">📌 Importante:</p>
-                                        <p class="text-sm mt-2">No cobramos tus multas ni gestionamos pagos directamente. Solo te ayudamos a entender tus opciones.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="mt-8 text-center">
-                                    <a href="/pago-parcial.html" class="service-button green-gradient">
-                                        Consultar opciones de pago
-                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ¿Cómo trabajamos? Section -->
-    <section id="como-trabajamos" class="py-12 md:py-16 lg:py-20 bg-dark-secondary">
-        <div class="container">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="section-title">Así te ayudamos, paso a paso</h2>
-                <p class="section-subtitle">Gestionamos tu solicitud para que no tengas que hacerlo tú.</p>
-            </div>
-            
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-                <div class="text-center">
-                    <div class="step-icon">
-                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Paso 1: Recibimos tu información</h3>
-                    <p class="text-secondary text-sm md:text-base leading-relaxed">Rellenas un formulario con los datos necesarios según el trámite que elijas. Solo pedimos la información estrictamente necesaria para iniciar la gestión. Tus datos se procesan de forma segura y sin compartirse con terceros.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="step-icon">
-                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Paso 2: Preparamos la gestión en tu nombre</h3>
-                    <p class="text-secondary text-sm md:text-base leading-relaxed">Utilizamos canales públicos para enviar la solicitud correspondiente. Actuamos como intermediarios: tú nos das permiso para enviar tu solicitud a través de plataformas disponibles al público.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="step-icon">
-                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Paso 3: Obtenemos el resultado</h3>
-                    <p class="text-secondary text-sm md:text-base leading-relaxed">Consultamos la plataforma oficial y recuperamos el resultado vinculado a tu solicitud. No emitimos documentos ni realizamos validaciones internas: simplemente recopilamos la respuesta del canal oficial.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="step-icon">
-                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Paso 4: Te enviamos la respuesta por email</h3>
-                    <p class="text-secondary text-sm md:text-base leading-relaxed">Recibirás un archivo PDF, imagen o guía con los siguientes pasos. Todo de forma digital, sin filas, sin traslados, sin perder tiempo.</p>
-                </div>
-            </div>
-            
-            <div class="mt-12 text-center">
-                <p class="text-secondary text-xs md:text-sm">No somos gobierno. No emitimos documentos. No garantizamos resultados. Te ayudamos a enviar tu solicitud correctamente para que recibas el documento oficial directamente de la entidad correspondiente.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ¿Por qué elegirnos? Section -->
-    <section class="py-12 md:py-16 lg:py-20 bg-dark-primary">
-        <div class="container">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="section-title">¿Por qué elegirnos?</h2>
-                <p class="section-subtitle">Soluciones claras, sin rodeos ni letras pequeñas. Esto es lo que nos diferencia:</p>
-            </div>
-            
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-                <div class="text-center">
-                    <div class="feature-icon">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-3">Somos independientes</h3>
-                    <p class="text-secondary text-sm">No pertenecemos al gobierno ni actuamos en su representación. Operamos como empresa privada, gestionando tus solicitudes de forma transparente.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="feature-icon">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-3">Sin filas, sin vueltas</h3>
-                    <p class="text-secondary text-sm">No pierdas tiempo con citas o trámites presenciales. Nosotros gestionamos por medios digitales desde el primer paso.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="feature-icon">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-3">Información clara, siempre</h3>
-                    <p class="text-secondary text-sm">Desde el inicio sabrás qué haremos, cuánto cuesta y cuándo tendrás respuesta. Sin promesas vagas ni términos ocultos.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="feature-icon">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-3">Solo pagas si gestionamos</h3>
-                    <p class="text-secondary text-sm">No cobramos por registrarte ni por revisar. Solo cuando realizamos un trámite completo a tu nombre.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonios Section -->
-    <section class="py-12 md:py-16 lg:py-20 bg-dark-secondary">
-        <div class="container">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="section-title">Testimonios reales</h2>
-                <p class="section-subtitle">Lo que dicen nuestros clientes</p>
-            </div>
-            
-                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
-                 <div class="testimonial-card group hover:transform hover:scale-105 transition-all duration-300 ease-in-out">
-                     <div class="flex items-start space-x-3 mb-4">
-                         <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-accent to-purple flex items-center justify-center overflow-hidden">
-                             <img src="assets/img/avatars/avatar1.webp" alt="Sofía Ramírez" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                             <span class="text-white font-bold text-lg sm:text-xl" style="display: none;">S</span>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                             <h4 class="font-bold text-sm sm:text-base lg:text-lg truncate">Sofía Ramírez</h4>
-                             <div class="flex items-center mt-1">
-                                 <span class="text-yellow-400 text-xs sm:text-sm">★★★★★</span>
-                                 <span class="text-secondary text-xs sm:text-sm ml-2">5.0</span>
-                             </div>
-                         </div>
-                     </div>
-                     <p class="text-primary text-sm sm:text-base leading-relaxed">"Tenía dudas sobre si mi coche tenía restricciones para la venta. En menos de 24 horas me enviaron un reporte completo con todo el detalle. El proceso fue súper transparente y profesional. Definitivamente los recomiendo."</p>
-                 </div>
-                 
-                 <div class="testimonial-card group hover:transform hover:scale-105 transition-all duration-300 ease-in-out">
-                     <div class="flex items-start space-x-3 mb-4">
-                         <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-accent to-purple flex items-center justify-center overflow-hidden">
-                             <img src="assets/img/avatars/avatar2.webp" alt="Diego Castillo" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                             <span class="text-white font-bold text-lg sm:text-xl" style="display: none;">D</span>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                             <h4 class="font-bold text-sm sm:text-base lg:text-lg truncate">Diego Castillo</h4>
-                             <div class="flex items-center mt-1">
-                                 <span class="text-yellow-400 text-xs sm:text-sm">★★★★★</span>
-                                 <span class="text-secondary text-xs sm:text-sm ml-2">5.0</span>
-                             </div>
-                         </div>
-                     </div>
-                     <p class="text-primary text-sm sm:text-base leading-relaxed">"Llevaba meses evitando revisar mis multas por miedo a la burocracia. Estos chicos me ayudaron a identificar exactamente qué tenía pendiente y me dieron opciones claras de pago. Todo desde mi casa, sin filas ni citas."</p>
-                 </div>
-                 
-                 <div class="testimonial-card group hover:transform hover:scale-105 transition-all duration-300 ease-in-out">
-                     <div class="flex items-start space-x-3 mb-4">
-                         <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-accent to-purple flex items-center justify-center overflow-hidden">
-                             <img src="assets/img/avatars/avatar3.webp" alt="Valentina Morales" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                             <span class="text-white font-bold text-lg sm:text-xl" style="display: none;">V</span>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                             <h4 class="font-bold text-sm sm:text-base lg:text-lg truncate">Valentina Morales</h4>
-                             <div class="flex items-center mt-1">
-                                 <span class="text-yellow-400 text-xs sm:text-sm">★★★★★</span>
-                                 <span class="text-secondary text-xs sm:text-sm ml-2">5.0</span>
-                             </div>
-                         </div>
-                     </div>
-                     <p class="text-primary text-sm sm:text-base leading-relaxed">"Como mujer sola, me daba miedo ir a las oficinas a hacer trámites. Con vehimovil pude verificar las restricciones de mi vehículo sin salir de casa. El servicio es confiable y me dieron toda la información que necesitaba."</p>
-                 </div>
-                 
-                 <div class="testimonial-card group hover:transform hover:scale-105 transition-all duration-300 ease-in-out">
-                     <div class="flex items-start space-x-3 mb-4">
-                         <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-accent to-purple flex items-center justify-center overflow-hidden">
-                             <img src="assets/img/avatars/avatar4.webp" alt="Carlos Vega" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                             <span class="text-white font-bold text-lg sm:text-xl" style="display: none;">C</span>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                             <h4 class="font-bold text-sm sm:text-base lg:text-lg truncate">Carlos Vega</h4>
-                             <div class="flex items-center mt-1">
-                                 <span class="text-yellow-400 text-xs sm:text-sm">★★★★★</span>
-                                 <span class="text-secondary text-xs sm:text-sm ml-2">5.0</span>
-                             </div>
-                         </div>
-                     </div>
-                     <p class="text-primary text-sm sm:text-base leading-relaxed">"Necesitaba vender mi camioneta urgentemente pero no sabía si tenía adeudos. Me hicieron una consulta completa y me confirmaron que estaba libre de restricciones. El proceso fue rápido y el precio justo por el servicio."</p>
-                 </div>
-                 
-                 <div class="testimonial-card group hover:transform hover:scale-105 transition-all duration-300 ease-in-out">
-                     <div class="flex items-start space-x-3 mb-4">
-                         <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-accent to-purple flex items-center justify-center overflow-hidden">
-                             <img src="assets/img/avatars/avatar5.webp" alt="Lucía Jiménez" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                             <span class="text-white font-bold text-lg sm:text-xl" style="display: none;">L</span>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                             <h4 class="font-bold text-sm sm:text-base lg:text-lg truncate">Lucía Jiménez</h4>
-                             <div class="flex items-center mt-1">
-                                 <span class="text-yellow-400 text-xs sm:text-sm">★★★★★</span>
-                                 <span class="text-secondary text-xs sm:text-sm ml-2">5.0</span>
-                             </div>
-                         </div>
-                     </div>
-                     <p class="text-primary text-sm sm:text-base leading-relaxed">"Mi hijo heredó un coche y queríamos asegurarnos de que no tuviera problemas antes de transferirlo. El reporte que nos enviaron fue muy detallado y nos ahorró muchos dolores de cabeza. Excelente servicio."</p>
-                 </div>
-                 
-                 <div class="testimonial-card group hover:transform hover:scale-105 transition-all duration-300 ease-in-out">
-                     <div class="flex items-start space-x-3 mb-4">
-                         <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-accent to-purple flex items-center justify-center overflow-hidden">
-                             <img src="assets/img/avatars/avatar6.webp" alt="Gabriel Silva" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                             <span class="text-white font-bold text-lg sm:text-xl" style="display: none;">G</span>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                             <h4 class="font-bold text-sm sm:text-base lg:text-lg truncate">Gabriel Silva</h4>
-                             <div class="flex items-center mt-1">
-                                 <span class="text-yellow-400 text-xs sm:text-sm">★★★★★</span>
-                                 <span class="text-secondary text-xs sm:text-sm ml-2">5.0</span>
-                             </div>
-                         </div>
-                     </div>
-                     <p class="text-primary text-sm sm:text-base leading-relaxed">"Trabajo todo el día y no tengo tiempo para ir a oficinas. Con vehimovil pude revisar mis multas pendientes en mi hora de comida. El reporte fue claro y me ayudaron a entender exactamente qué tenía que pagar."</p>
-                 </div>
-                 
-                 <div class="testimonial-card group hover:transform hover:scale-105 transition-all duration-300 ease-in-out">
-                     <div class="flex items-start space-x-3 mb-4">
-                         <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-accent to-purple flex items-center justify-center overflow-hidden">
-                             <img src="assets/img/avatars/avatar7.webp" alt="Adriana Ruiz" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                             <span class="text-white font-bold text-lg sm:text-xl" style="display: none;">A</span>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                             <h4 class="font-bold text-sm sm:text-base lg:text-lg truncate">Adriana Ruiz</h4>
-                             <div class="flex items-center mt-1">
-                                 <span class="text-yellow-400 text-xs sm:text-sm">★★★★★</span>
-                                 <span class="text-secondary text-xs sm:text-sm ml-2">5.0</span>
-                             </div>
-                         </div>
-                     </div>
-                     <p class="text-primary text-sm sm:text-base leading-relaxed">"Tenía una multa antigua que no sabía cómo pagar. Me explicaron las opciones de pago parcial y me ayudaron a entender el proceso. Ahora puedo pagar a plazos sin problemas. Muy agradecida con el servicio."</p>
-                 </div>
-                 
-                 <div class="testimonial-card group hover:transform hover:scale-105 transition-all duration-300 ease-in-out">
-                     <div class="flex items-start space-x-3 mb-4">
-                         <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-accent to-purple flex items-center justify-center overflow-hidden">
-                             <img src="assets/img/avatars/avatar8.webp" alt="Javier Moreno" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                             <span class="text-white font-bold text-lg sm:text-xl" style="display: none;">J</span>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                             <h4 class="font-bold text-sm sm:text-base lg:text-lg truncate">Javier Moreno</h4>
-                             <div class="flex items-center mt-1">
-                                 <span class="text-yellow-400 text-xs sm:text-sm">★★★★★</span>
-                                 <span class="text-secondary text-xs sm:text-sm ml-2">5.0</span>
-                             </div>
-                         </div>
-                     </div>
-                     <p class="text-primary text-sm sm:text-base leading-relaxed">"Compré un coche usado y quería asegurarme de que estuviera limpio. El reporte de restricciones me dio la tranquilidad que necesitaba. El servicio es profesional y confiable. Lo recomiendo sin dudarlo."</p>
-                 </div>
-             </div>
-        </div>
-    </section>
-
-    <!-- Aviso importante Section -->
-    <section class="py-12 md:py-16 lg:py-20 bg-dark-secondary">
-        <div class="container">
-            <div class="max-w-4xl mx-auto text-center px-4">
-                <div class="legal-notice">
-                    <h2 class="text-3xl font-bold mb-6 text-accent">Aviso importante</h2>
-                    <p class="text-lg text-secondary leading-relaxed">
-                        Este sitio web ofrece un servicio privado de asistencia digital. No pertenecemos a ninguna entidad pública ni actuamos en su representación.
-                        <br><br>
-                        No emitimos documentos oficiales, ni garantizamos resoluciones automáticas. Nuestro objetivo es ayudarte a comprender mejor tu situación y facilitar ciertos trámites de forma clara y eficiente.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto Section -->
-    <section class="py-16 md:py-20 lg:py-24 bg-dark-primary border-t border-dark-border">
-        <div class="container">
-            <div class="max-w-3xl mx-auto text-center px-4">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
-                    ¿Tienes dudas o necesitas ayuda?
-                </h2>
-                <p class="text-lg md:text-xl text-secondary leading-relaxed mb-8 md:mb-12">
-                    Nuestro equipo está listo para ayudarte con cualquier consulta sobre nuestros servicios. Escríbenos y te responderemos lo antes posible.
-                </p>
                 <div class="flex justify-center">
-                    <a href="/contacto.html" class="inline-flex items-center justify-center bg-gradient-to-r from-accent to-purple hover:from-purple hover:to-accent text-white font-semibold text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-accent/30">
-                        <span class="whitespace-nowrap">Ir a la página de contacto</span>
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ml-2 sm:ml-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
+                    <div class="bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
+                        <img src="images/hero-vehiculo-documento.svg" alt="Auto con documento PDF" class="w-40 h-30 sm:w-48 sm:h-36 md:w-64 md:h-48 object-cover rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Quiénes somos? -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-primary">
+                    ¿Quiénes somos?
+                </h2>
+                
+                <div class="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Sabemos que gestionar trámites relacionados con tu vehículo en México puede ser confuso, lento o frustrante. Hay sitios que no cargan bien, información que cambia constantemente y procesos que muchas veces no se explican con claridad.
+                    </p>
+                    
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Por eso nacimos: para ayudarte a entender lo que necesitas, orientarte paso a paso y, si así lo decides, acompañarte en la gestión de manera simple, rápida y sin estrés.
+                    </p>
+                    
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Somos una empresa digital especializada en asistencia informativa para trámites. No pertenecemos al gobierno ni representamos a ninguna institución oficial. Actuamos de forma independiente, conectando a las personas con la información que necesitan para avanzar con seguridad.
+                    </p>
+                    
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Sí, tú puedes hacer estos trámites por tu cuenta — y es gratis si decides hacerlo así. Pero también entendemos que los errores, los tiempos de espera y la falta de claridad muchas veces terminan costando más. Por eso existimos: para evitarte esas complicaciones.
+                    </p>
+                    
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Ofrecemos un servicio claro, transparente y centrado en el usuario. Desde el primer contacto te explicamos cómo funciona cada proceso, qué incluye y cuánto cuesta, sin letras pequeñas ni condiciones ocultas. Y lo más importante: solo pagas si hacemos algo completo para ti.
+                    </p>
+                </div>
+                
+                <!-- Call to Action Cards -->
+                <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                    <div class="bg-accent-yellow/10 rounded-xl p-4 sm:p-6 border border-accent-yellow/20 hover:bg-accent-yellow/20 transition-colors duration-200">
+                        <h3 class="text-base sm:text-lg font-bold mb-3 text-primary">¿Quieres saber más sobre cómo trabajamos?</h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            Te contamos nuestra historia, misión y cómo ayudamos a miles de personas cada mes.
+                        </p>
+                        <a href="sobre-nosotros.html" class="inline-block bg-accent-yellow text-primary text-sm font-medium py-2 px-4 rounded-lg hover:bg-yellow-400 transition-colors">
+                            Ir a la página "Sobre nosotros"
+                        </a>
+                    </div>
+                    
+                    <div class="bg-accent-teal/10 rounded-xl p-4 sm:p-6 border border-accent-teal/20 hover:bg-accent-teal/20 transition-colors duration-200">
+                        <h3 class="text-base sm:text-lg font-bold mb-3 text-primary">¿Tienes preguntas o necesitas ayuda?</h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            Estamos aquí para escucharte y responder lo que necesites.
+                        </p>
+                        <a href="contacto.html" class="inline-block bg-accent-teal text-primary text-sm font-medium py-2 px-4 rounded-lg hover:bg-teal-300 transition-colors">
+                            Ir a la página de contacto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Qué puedes esperar del servicio? -->
+    <section id="como-trabajamos" class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-primary">
+                ¿Qué pasa después de enviar tu solicitud?
+            </h2>
+            
+            <div class="space-y-8 sm:space-y-12 lg:space-y-16">
+                <!-- Etapa 1 -->
+                <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                    <div class="text-center">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Tratamos tus datos con responsabilidad</h3>
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600">
+                            Recopilamos únicamente la información esencial para poder ayudarte. No utilizamos tus datos con fines publicitarios, ni los compartimos con terceros. Cada paso se realiza con confidencialidad, y siempre bajo el principio de uso limitado y necesario.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="images/etapa-datos-seguros.svg" alt="Datos seguros" class="w-40 h-30 sm:w-48 sm:h-36 md:w-64 md:h-48 object-cover rounded-xl">
+                    </div>
+                </div>
+
+                <!-- Etapa 2 -->
+                <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                    <div class="order-2 lg:order-1 flex justify-center">
+                        <img src="images/etapa-revision-manual.svg" alt="Revisión manual" class="w-40 h-30 sm:w-48 sm:h-36 md:w-64 md:h-48 object-cover rounded-xl">
+                    </div>
+                    <div class="order-1 lg:order-2 text-center">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Evaluación caso por caso</h3>
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600">
+                            Un asistente digital revisa de forma manual si tu situación aplica a alguno de los servicios que ofrecemos. Si no es viable, te lo informamos de inmediato sin generar costos innecesarios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Etapa 3 -->
+                <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                    <div class="text-center">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Gestión a tu nombre con claridad</h3>
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600">
+                            Cuando aplicas, iniciamos la recopilación de información desde fuentes públicas disponibles. No actuamos como autoridad, solo facilitamos el proceso para que no tengas que hacerlo por tu cuenta.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="images/etapa-envio-solicitud.svg" alt="Envío de solicitud" class="w-40 h-30 sm:w-48 sm:h-36 md:w-64 md:h-48 object-cover rounded-xl">
+                    </div>
+                </div>
+
+                <!-- Etapa 4 -->
+                <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                    <div class="order-2 lg:order-1 flex justify-center">
+                        <img src="images/etapa-entrega-digital.svg" alt="Entrega digital" class="w-40 h-30 sm:w-48 sm:h-36 md:w-64 md:h-48 object-cover rounded-xl">
+                    </div>
+                    <div class="order-1 lg:order-2 text-center">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Entrega digital sin complicaciones</h3>
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600">
+                            Cuando el análisis se completa, te enviamos un documento o resumen claro por email. No necesitas desplazarte ni hacer citas, todo es 100% digital y explicado de forma comprensible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Qué nos hace diferentes? -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-background-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
+            
+            <!-- Блок 1: Полноформатный текст -->
+            <div class="mb-12 sm:mb-16 lg:mb-20">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-12 text-primary">
+                    ¿Por qué confiar en nosotros?
+                </h2>
+                
+                <div class="prose prose-lg max-w-none text-center">
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                        Somos una compañía digital privada. No estamos afiliados a ninguna institución pública.
+                    </p>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                        Nuestro objetivo es ayudarte a entender y resolver trámites vehiculares sin perder tiempo ni cometer errores por desconocimiento.
+                    </p>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-8 sm:mb-12">
+                        Sabemos que muchos procesos pueden parecer confusos o inaccesibles. Por eso actuamos como asistentes digitales independientes, 
+                        facilitándote la información, gestionando por ti y entregándote resultados claros, paso a paso.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center mt-8 sm:mt-12">
+                    <img src="images/diferencias-servicio-independiente.svg" alt="Servicio independiente" class="w-full max-w-4xl h-auto object-cover rounded-xl">
+                </div>
+            </div>
+
+            <!-- Блок 2: Dos beneficios juntos -->
+            <div class="mb-12 sm:mb-16 lg:mb-20">
+                <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-primary">
+                            Atención digital sin complicaciones
+                        </h3>
+                        <div class="space-y-3 sm:space-y-4 text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                            <p>
+                                No necesitas citas ni filas. Desde cualquier lugar puedes pedirnos ayuda y nos encargamos del resto.
+                            </p>
+                            <p>
+                                Además, somos transparentes desde el primer paso: no prometemos lo que no podemos hacer y te explicamos cada paso antes de cobrarte.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center lg:justify-end">
+                        <img src="images/diferencias-digital-sin-filas.svg" alt="Atención digital sin filas" class="w-full max-w-lg h-auto object-cover rounded-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок 3: Beneficio final -->
+            <div>
+                <div class="text-center mb-6 sm:mb-8 lg:mb-12">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-primary">
+                        Pagas solo si gestionamos algo completo para ti
+                    </h3>
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-3 sm:mb-4">
+                            No cobramos por consultas básicas ni por darte información general. Solo si decides que gestionemos un trámite completo en tu nombre, te daremos el costo final antes de iniciar.
+                        </p>
+                        <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                            Sin sorpresas, sin cobros ocultos. Así tienes control total desde el inicio.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center">
+                    <img src="images/diferencias-pago-justo-blocofinal.svg" alt="Pago justo y transparente" class="w-full max-w-4xl h-auto object-cover rounded-xl">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Servicios - Cada uno en su propia sección -->
+    <section id="servicios" class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-primary">
+                Nuestros servicios
+            </h2>
+        </div>
+    </section>
+
+    <!-- Servicio 1: Consulta de Multas -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-background-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                <div class="text-center">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <span class="text-sm sm:text-lg md:text-2xl">📋</span>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary">
+                        Te ayudamos a revisar si tienes multas pendientes
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
+                        Muchos conductores ni saben que tienen multas vigentes. Nosotros revisamos y te entregamos los resultados.
+                    </p>
+                    <a href="multas.html" class="btn-primary text-base sm:text-lg w-full sm:w-auto">Consultar posibles multas</a>
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/servicio-verificar-multas.svg" alt="Verificar multas" class="w-48 h-36 sm:w-64 sm:h-48 md:w-80 md:h-60 object-cover rounded-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicio 2: Verificación de Restricciones -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                <div class="order-2 lg:order-1 flex justify-center">
+                    <img src="images/servicio-restricciones-venta.svg" alt="Restricciones de venta" class="w-48 h-36 sm:w-64 sm:h-48 md:w-80 md:h-60 object-cover rounded-xl">
+                </div>
+                <div class="order-1 lg:order-2 text-center">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-accent-teal rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <span class="text-sm sm:text-lg md:text-2xl">🔒</span>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary">
+                        ¿Tu auto está libre para venderse? Lo revisamos por ti
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
+                        Una restricción legal puede impedir la venta. Revisamos el estado administrativo de tu auto por ti.
+                    </p>
+                    <a href="restricciones.html" class="btn-secondary text-base sm:text-lg w-full sm:w-auto">Comprobar libertad legal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicio 3: Opciones de Pago -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-background-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                <div class="text-center">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <span class="text-sm sm:text-lg md:text-2xl">💳</span>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary">
+                        Te ayudamos a conocer tus opciones de pago en multas
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
+                        En algunos estados puedes pagar multas en partes. Verificamos si aplicas.
+                    </p>
+                    <a href="convenios.html" class="btn-primary text-base sm:text-lg w-full sm:w-auto">Ver opciones de pago</a>
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/servicio-pago-parcial.svg" alt="Pago parcial" class="w-48 h-36 sm:w-64 sm:h-48 md:w-80 md:h-60 object-cover rounded-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿No ves el servicio que necesitas? -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <img src="images/seccion-contacto-simple.svg" alt="Contacto" class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto mb-4 sm:mb-6 rounded-full object-cover">
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary">
+                    ¿Tienes una situación especial? Cuéntanos
+                </h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
+                    Cada caso es distinto. Si no ves tu problema aquí, podemos revisarlo contigo.
+                </p>
+                <a href="contacto.html" class="btn-primary text-base sm:text-lg w-full sm:w-auto">
+                    Ir a la página de contacto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lo que dicen nuestros usuarios -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-background-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-primary">
+                Lo que dicen nuestros usuarios
+            </h2>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Slider Container -->
+                <div id="testimonials-slider" class="relative overflow-hidden">
+                    <div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out">
+                        
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
+                                <img src="images/avatar1.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
+                                <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">María González</h3>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Consulta de multas</p>
+                                <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                                    "Todo fue claro desde el inicio. Me explicaron paso a paso qué necesitaban y en cuánto tiempo tendría los resultados. No tuve que preocuparme por nada."
+                                </p>
+                                <div class="text-yellow-400 text-base sm:text-lg">🌟🌟🌟🌟🌟</div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
+                                <img src="images/avatar2.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
+                                <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Carlos Rodríguez</h3>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Verificación de restricciones</p>
+                                <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                                    "Buen trato y sin complicaciones. Quería vender mi auto y me ayudaron a verificar que todo estuviera en orden antes de la venta."
+                                </p>
+                                <div class="text-yellow-400 text-base sm:text-lg">🌟🌟🌟🌟🌟</div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
+                                <img src="images/avatar3.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
+                                <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Ana Martínez</h3>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Opciones de pago</p>
+                                <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                                    "Me ayudaron con lo que necesitaba. Tenía varias multas y no sabía cómo pagarlas. Me explicaron las opciones disponibles y todo salió bien."
+                                </p>
+                                <div class="text-yellow-400 text-base sm:text-lg">🌟🌟🌟🌟🌟</div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
+                                <img src="images/avatar4.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
+                                <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Luis Hernández</h3>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Consulta general</p>
+                                <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                                    "Proceso muy sencillo. Desde mi casa pude resolver todo lo que necesitaba. La comunicación fue clara y los resultados llegaron a tiempo."
+                                </p>
+                                <div class="text-yellow-400 text-base sm:text-lg">🌟🌟🌟🌟🌟</div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
+                                <img src="images/avatar5.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
+                                <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Carmen López</h3>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Verificación de documentos</p>
+                                <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                                    "Excelente atención. Me sentí segura durante todo el proceso. Me explicaron cada paso y resolvieron todas mis dudas sin problemas."
+                                </p>
+                                <div class="text-yellow-400 text-base sm:text-lg">🌟🌟🌟🌟🌟</div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 6 -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
+                                <img src="images/avatar6.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
+                                <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Patricia Silva</h3>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Consulta de multas</p>
+                                <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                                    "Todo muy profesional. No tuve que salir de casa para nada. Los resultados llegaron por email tal como me dijeron. Muy recomendable."
+                                </p>
+                                <div class="text-yellow-400 text-base sm:text-lg">🌟🌟🌟🌟🌟</div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 7 -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
+                                <img src="images/avatar7.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
+                                <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Sofia Torres</h3>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Gestión de trámites</p>
+                                <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                                    "Servicio muy útil. Me ahorraron mucho tiempo y preocupaciones. Todo fue transparente desde el principio hasta el final."
+                                </p>
+                                <div class="text-yellow-400 text-base sm:text-lg">🌟🌟🌟🌟🌟</div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 8 -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
+                                <img src="images/avatar8.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
+                                <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Roberto Jiménez</h3>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Verificación de restricciones</p>
+                                <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                                    "Buen servicio y atención personalizada. Me ayudaron a resolver una situación complicada de manera sencilla y eficiente."
+                                </p>
+                                <div class="text-yellow-400 text-base sm:text-lg">🌟🌟🌟🌟🌟</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button id="prev-btn" class="absolute left-2 sm:left-4 top-1/3 sm:top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary p-1.5 sm:p-2 rounded-full shadow-lg transition-all duration-200 z-10">
+                    <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button id="next-btn" class="absolute right-2 sm:right-4 top-1/3 sm:top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary p-1.5 sm:p-2 rounded-full shadow-lg transition-all duration-200 z-10">
+                    <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Dots Indicator -->
+                <div class="flex justify-center mt-6 sm:mt-8 space-x-1.5 sm:space-x-2">
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent-yellow rounded-full dot-indicator active"></div>
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full dot-indicator"></div>
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full dot-indicator"></div>
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full dot-indicator"></div>
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full dot-indicator"></div>
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full dot-indicator"></div>
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full dot-indicator"></div>
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full dot-indicator"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contacto" class="bg-dark-primary border-t border-dark-border py-8 md:py-12">
-        <div class="container">
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                <div class="md:col-span-2">
-                    <h3 class="text-2xl font-bold text-accent mb-4">vehimovil.com</h3>
-                    <p class="text-secondary mb-4">Servicio digital independiente. No afiliado al gobierno.</p>
-                    <p class="text-secondary text-sm">© Todos los derechos reservados.</p>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Enlaces</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="footer-link">Inicio</a></li>
-                        <li><a href="#servicios" class="footer-link">Servicios</a></li>
-                        <li><a href="/politica-privacidad.html" class="footer-link">Privacidad</a></li>
-                        <li><a href="/aviso-legal.html" class="footer-link">Aviso legal</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Contacto</h4>
-                    <p class="text-secondary text-sm">Servicio digital disponible 24/7</p>
-                    <p class="text-secondary text-sm mt-2">No afiliado a entidades gubernamentales</p>
+    <footer class="bg-primary text-white py-8 sm:py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Vehimovil</div>
+                <p class="text-xs sm:text-sm md:text-base text-gray-300 mb-6 max-w-2xl mx-auto">
+                    Servicio privado. No afiliado a ninguna entidad pública. No emitimos documentos oficiales: ayudamos a obtenerlos a través de los medios legales correspondientes.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6">
+                    <a href="multas.html" class="hover:text-accent-yellow transition-colors text-sm sm:text-base">Multas</a>
+                    <a href="restricciones.html" class="hover:text-accent-yellow transition-colors text-sm sm:text-base">Restricciones</a>
+                    <a href="convenios.html" class="hover:text-accent-yellow transition-colors text-sm sm:text-base">Convenios</a>
+                    <a href="contacto.html" class="hover:text-accent-yellow transition-colors text-sm sm:text-base">Contacto</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-                
-                // Update button icon
-                const svg = this.querySelector('svg');
-                if (mobileMenu.classList.contains('hidden')) {
-                    svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-                } else {
-                    svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
-                }
-            });
-            
-            // Close mobile menu when clicking on links
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuBtn.querySelector('svg').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-                });
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
             });
         }
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
             });
         });
-        
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all sections for animation
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-        
-        // Performance optimization: Lazy load images and defer non-critical scripts
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
+
+        // Testimonials Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const track = document.getElementById('testimonials-track');
+        const dots = document.querySelectorAll('.dot-indicator');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let autoSlideInterval;
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+                dot.classList.toggle('bg-accent-yellow', index === currentSlide);
+                dot.classList.toggle('bg-gray-300', index !== currentSlide);
             });
         }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 4500); // 4.5 seconds
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+        });
+
+        // Start auto-slide
+        startAutoSlide();
+
+        // Pause on hover
+        const slider = document.getElementById('testimonials-slider');
+        slider.addEventListener('mouseenter', stopAutoSlide);
+        slider.addEventListener('mouseleave', startAutoSlide);
     </script>
 </body>
 </html> 
