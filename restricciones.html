@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado Legal del Vehículo - Vehimovil</title>
+    <meta name="description" content="¿Tu auto está libre para venderse? Revisamos el estado administrativo de tu vehículo. Servicio privado de asistencia digital.">
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="font-sans">
+    <header class="bg-primary text-white py-4">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between items-center">
+                <div class="text-xl sm:text-2xl font-bold">
+                    <a href="index.html" class="hover:text-accent-yellow transition-colors">Vehimovil</a>
+                </div>
+                
+                <button id="mobile-menu-button" class="text-white hover:text-accent-yellow transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 right-0 bg-primary text-white z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center mb-4">
+                <div class="text-xl sm:text-2xl font-bold">Vehimovil</div>
+                <button id="mobile-menu-close" class="text-white hover:text-accent-yellow transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-3 pt-4 border-t border-white/20">
+                <a href="index.html" class="hover:text-accent-yellow transition-colors py-2">Inicio</a>
+                <a href="multas.html" class="hover:text-accent-yellow transition-colors py-2">Multas</a>
+                <a href="convenios.html" class="hover:text-accent-yellow transition-colors py-2">Convenios</a>
+                <a href="contacto.html" class="hover:text-accent-yellow transition-colors py-2">Contacto</a>
+                <a href="sobre-nosotros.html" class="hover:text-accent-yellow transition-colors py-2">Sobre nosotros</a>
+                <a href="politica-privacidad.html" class="hover:text-accent-yellow transition-colors py-2">Política de privacidad</a>
+                <a href="aviso-legal.html" class="hover:text-accent-yellow transition-colors py-2">Aviso legal</a>
+                <a href="terminos-condiciones.html" class="hover:text-accent-yellow transition-colors py-2">Términos y condiciones</a>
+                <a href="politica-cookies.html" class="hover:text-accent-yellow transition-colors py-2">Política de cookies</a>
+                <a href="politica-reembolso.html" class="hover:text-accent-yellow transition-colors py-2">Política de reembolso</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </header>
+
+    <section class="bg-primary text-white py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                    ¿Tu auto está libre para venderse? Lo revisamos por ti
+                </h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8">
+                    Una restricción legal puede impedir la venta. Revisamos el estado administrativo de tu auto por ti.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+
+
+                <div class="mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-6">Sobre esta gestión</h2>
+                    <div class="space-y-4 text-gray-700 leading-relaxed">
+                        <p>
+                            Este servicio consiste en una asistencia digital informativa, donde recopilamos, organizamos y presentamos información relacionada con tu solicitud, utilizando únicamente canales públicos y legalmente accesibles. Nuestro objetivo es ayudarte a comprender mejor tu situación y brindarte orientación clara para que puedas tomar decisiones informadas.
+                        </p>
+                        <p>
+                            No actuamos en representación de ninguna autoridad gubernamental, ni tenemos convenios con instituciones públicas. No gestionamos trámites oficiales en tu nombre ni modificamos registros ante dependencias del gobierno.
+                        </p>
+                        <p>
+                            Todos los datos que procesamos se obtienen de forma manual, tras recibir tu solicitud. No accedemos a sistemas institucionales como terceros ni realizamos validaciones oficiales. Únicamente organizamos información con fines explicativos.
+                        </p>
+                        <p>
+                            El tiempo estimado de entrega es de 24 a 48 horas hábiles desde la recepción de la solicitud, salvo casos excepcionales que requieran más análisis.
+                        </p>
+                        <p>
+                            Este servicio tiene un costo fijo que corresponde únicamente a la preparación del informe informativo. Cualquier otro cobro oficial relacionado con multas, impuestos u obligaciones legales depende exclusivamente de la autoridad correspondiente y no está incluido en nuestra tarifa, ni bajo nuestro control.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-accent-yellow/10 border border-accent-yellow/20 rounded-xl p-6 sm:p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Precio del servicio</h2>
+                    <div class="text-3xl font-bold text-primary mb-4">$179 MXN</div>
+                    <p class="text-gray-700 mb-4">
+                        Incluye la revisión de bloqueos o adeudos por impuestos o infracciones.
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        Este monto corresponde únicamente al servicio de asistencia digital. Cualquier impuesto, recargo, multa u obligación oficial está fuera de nuestro control y es responsabilidad exclusiva de las autoridades competentes.
+                    </p>
+                </div>
+
+                <div class="bg-neutral-800 text-white p-4 rounded-md mb-8 text-sm">
+                    <strong>Importante:</strong> Este sitio no forma parte del gobierno ni representa a ninguna institución pública. No tramitamos ni modificamos datos oficiales. No recopilamos información confidencial como CURP, RFC o documentos personales. Toda la información solicitada en el formulario es estrictamente general y no sensible.
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 sm:p-8">
+                    <h2 class="text-2xl font-bold text-primary mb-6">Comprobar libertad legal</h2>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-yellow focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="placas" class="block text-sm font-medium text-gray-700 mb-2">Placas del vehículo *</label>
+                            <input type="text" id="placas" name="placas" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-yellow focus:border-transparent" placeholder="Ej: ABC-123">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email de contacto *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-yellow focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">Teléfono (opcional)</label>
+                            <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-yellow focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="comentarios" class="block text-sm font-medium text-gray-700 mb-2">Comentarios adicionales (opcional)</label>
+                            <textarea id="comentarios" name="comentarios" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-yellow focus:border-transparent" placeholder="Información adicional que consideres relevante..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary text-lg w-full sm:w-auto px-8 py-4">
+                            Iniciar verificación
+                        </button>
+                    </form>
+                </div>
+
+                <div class="mt-12 bg-background-light rounded-xl p-6 sm:p-8">
+                    <h2 class="text-2xl font-bold text-primary mb-6">¿Qué sucede después?</h2>
+                    <p class="text-gray-700 mb-8 leading-relaxed">
+                        Después de enviar tu solicitud, iniciamos un proceso claro, seguro y estructurado que consta de tres pasos esenciales:
+                    </p>
+                    <div class="space-y-8">
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
+                            <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center flex-shrink-0">
+                                <img src="images/analisis-informacion.webp" alt="Análisis de información" class="w-8 h-8 object-cover rounded">
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <h3 class="font-bold text-primary mb-2">1. Analizamos la información recibida</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    Revisamos manualmente los datos que nos proporcionas, siempre bajo estándares de confidencialidad. No almacenamos información sensible innecesariamente y no la compartimos con terceros.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
+                            <div class="w-16 h-16 bg-accent-teal rounded-full flex items-center justify-center flex-shrink-0">
+                                <img src="images/revision-viabilidad.webp" alt="Revisión de viabilidad" class="w-8 h-8 object-cover rounded">
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <h3 class="font-bold text-primary mb-2">2. Confirmamos la viabilidad del servicio</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    Verificamos si, con los datos proporcionados, podemos generar un resumen informativo útil para ti. No validamos ni registramos datos oficiales, y solo emitimos respuestas cuando contamos con información suficiente para ayudarte de manera clara.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
+                            <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center flex-shrink-0">
+                                <img src="images/entrega-email.webp" alt="Entrega por email" class="w-8 h-8 object-cover rounded">
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <h3 class="font-bold text-primary mb-2">3. Te enviamos los resultados</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    En un plazo estimado de 24 a 48 horas hábiles, recibirás un correo electrónico con un resumen organizado en formato de lectura fácil. No es un documento oficial, sino una guía útil basada en datos públicos para orientarte sobre tus próximos pasos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-4 bg-accent-yellow/10 border border-accent-yellow/20 rounded-lg">
+                        <div class="flex items-start">
+                            <span class="text-accent-yellow text-lg mr-3">✅</span>
+                            <div>
+                                <strong class="text-primary">Importante:</strong>
+                                <p class="text-sm text-gray-700 mt-1 leading-relaxed">
+                                    Este proceso no incluye gestiones directas ante autoridades, ni acceso a plataformas gubernamentales. No actuamos como representantes oficiales. Somos un servicio informativo e independiente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-8 sm:py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12">
+                <div class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Vehimovil</div>
+                <p class="text-sm text-gray-400 max-w-2xl mx-auto">
+                    Vehimóvil es una empresa privada de asistencia digital. No somos parte del gobierno. Ofrecemos ayuda informativa para simplificar tus gestiones.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-8">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg mb-4">Información</h3>
+                    <ul class="space-y-2">
+                        <li><a href="sobre-nosotros.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Sobre nosotros</a></li>
+                        <li><a href="contacto.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-center">
+                    <h3 class="font-bold text-lg mb-4">Políticas legales</h3>
+                    <ul class="space-y-2">
+                        <li><a href="politica-privacidad.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Política de privacidad</a></li>
+                        <li><a href="aviso-legal.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Aviso legal</a></li>
+                        <li><a href="terminos-condiciones.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Términos y condiciones</a></li>
+                        <li><a href="politica-cookies.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Política de cookies</a></li>
+                        <li><a href="politica-reembolso.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Política de reembolso</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-center">
+                    <h3 class="font-bold text-lg mb-4">Servicios populares</h3>
+                    <ul class="space-y-2">
+                        <li><a href="multas.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Revisión de multas</a></li>
+                        <li><a href="convenios.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Opciones de pago en multas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mb-8">
+                <p class="text-sm text-gray-400">
+                    ¿Tienes dudas? Escríbenos a <a href="mailto:about@vehimovil.com" class="underline text-white hover:text-accent-yellow transition-colors">about@vehimovil.com</a> o llama al <a href="tel:+525523879230" class="underline text-white hover:text-accent-yellow transition-colors">+52 55 2387 9230</a>.
+                </p>
+            </div>
+
+            <div class="text-center mb-6">
+                <button id="cookie-preferences-link" class="text-sm text-gray-400 hover:text-accent-yellow transition-colors">Preferencias de cookies</button>
+            </div>
+
+            <div class="border-t border-gray-700 pt-6">
+                <p class="text-xs text-gray-500 text-center">
+                    © 2025 Vehimóvil. Todos los derechos reservados. Esta es una empresa privada sin relación con entidades gubernamentales.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-primary text-white p-3 sm:p-4 md:p-6 z-50 transform translate-y-full transition-transform duration-300 ease-in-out shadow-2xl">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 sm:gap-6">
+                <div class="flex-1">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Configuración de cookies</h3>
+                    <div class="space-y-2 sm:space-y-3 text-xs sm:text-sm text-gray-200 leading-relaxed">
+                        <p>
+                            Este sitio web utiliza cookies propias y de terceros para garantizar su correcto funcionamiento, personalizar la experiencia del usuario, analizar el tráfico web y ofrecer servicios adaptados a tus intereses. Algunas cookies son estrictamente necesarias para permitir funcionalidades básicas del sitio, como la navegación segura y el acceso a áreas protegidas. Estas cookies no pueden ser desactivadas.
+                        </p>
+                        <p>
+                            Con tu consentimiento, también utilizamos cookies opcionales para mejorar el rendimiento, analizar estadísticas de uso, recordar tus preferencias, ofrecer contenido personalizado y mostrar anuncios relacionados con tus intereses. Estas cookies solo se almacenarán en tu dispositivo si así lo autorizas expresamente.
+                        </p>
+                        <p>
+                            Puedes aceptar todas las cookies, rechazarlas o configurar tus preferencias en cualquier momento. Tu decisión no afectará negativamente al acceso al sitio, aunque ciertas funciones podrían no estar disponibles sin el uso de cookies opcionales.
+                        </p>
+                        <p>
+                            Nos comprometemos a no compartir tus datos con terceros para fines comerciales sin tu autorización. Para más información detallada sobre cada categoría de cookies y cómo las utilizamos, revisa nuestra <a href="politica-privacidad.html" class="text-accent-yellow hover:text-yellow-300 underline font-medium">Política de Privacidad</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 sm:gap-3 lg:flex-shrink-0 lg:flex-col lg:gap-3">
+                    <button id="accept-all-cookies" class="btn-primary text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 font-medium">Aceptar todas</button>
+                    <button id="reject-all-cookies" class="bg-gray-600 hover:bg-gray-700 text-white text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors font-medium">Rechazar todas</button>
+                    <button id="configure-cookies" class="border-2 border-accent-yellow text-accent-yellow hover:bg-accent-yellow hover:text-primary text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors font-medium">Configurar preferencias</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-2 sm:p-4">
+            <div class="bg-white text-primary rounded-xl shadow-2xl max-w-3xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
+                <div class="p-4 sm:p-6 md:p-8">
+                    <div class="flex justify-between items-start mb-6 sm:mb-8">
+                        <div class="flex-1">
+                            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Gestiona tus preferencias de cookies</h2>
+                            <p class="text-gray-600 text-sm sm:text-base">
+                                Puedes decidir qué tipo de cookies permitir. Tu consentimiento se puede modificar en cualquier momento desde esta sección.
+                            </p>
+                        </div>
+                        <button id="close-cookie-modal" class="text-gray-500 hover:text-gray-700 text-2xl sm:text-3xl p-2 ml-2">&times;</button>
+                    </div>
+                    
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="border-2 border-gray-200 rounded-lg p-4 sm:p-6 bg-gray-50">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4">
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Cookies estrictamente necesarias</h3>
+                                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                        Estas cookies son esenciales para el funcionamiento del sitio web. No se pueden desactivar en nuestros sistemas y no requieren consentimiento.
+                                    </p>
+                                </div>
+                                <div class="flex items-center sm:ml-4">
+                                    <span class="text-green-600 text-xs sm:text-sm font-bold bg-green-100 px-2 sm:px-3 py-1 rounded-full">✓ Siempre activas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-gray-200 rounded-lg p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4">
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Cookies de análisis</h3>
+                                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                        Nos permiten entender cómo los usuarios interactúan con el sitio web para mejorar nuestros servicios y rendimiento.
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer sm:ml-4">
+                                    <input type="checkbox" id="analytics-cookies" class="sr-only peer">
+                                    <div class="w-11 h-6 sm:w-12 sm:h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent-yellow/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 sm:after:h-6 after:w-5 sm:after:w-6 after:transition-all peer-checked:bg-accent-yellow"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-gray-200 rounded-lg p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4">
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Cookies funcionales</h3>
+                                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                        Permiten recordar tus elecciones (idioma, región, etc.) y ofrecer funciones mejoradas y personalizadas.
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer sm:ml-4">
+                                    <input type="checkbox" id="functional-cookies" class="sr-only peer">
+                                    <div class="w-11 h-6 sm:w-12 sm:h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent-yellow/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 sm:after:h-6 after:w-5 sm:after:w-6 after:transition-all peer-checked:bg-accent-yellow"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-gray-200 rounded-lg p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4">
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Cookies de publicidad y personalización</h3>
+                                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                        Utilizadas para mostrar anuncios relevantes para ti y tus intereses. No compartimos datos personales sin tu consentimiento.
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer sm:ml-4">
+                                    <input type="checkbox" id="marketing-cookies" class="sr-only peer">
+                                    <div class="w-11 h-6 sm:w-12 sm:h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent-yellow/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 sm:after:h-6 after:w-5 sm:after:w-6 after:transition-all peer-checked:bg-accent-yellow"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
+                        <button id="save-cookie-settings" class="btn-primary text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 font-medium">Guardar configuración</button>
+                        <button id="accept-all-modal" class="bg-accent-yellow text-primary text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-yellow-400 transition-colors font-medium">Aceptar todas</button>
+                        <button id="reject-all-modal" class="bg-gray-600 text-white text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-700 transition-colors font-medium">Rechazar todas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuClose.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        const cookieBanner = document.getElementById('cookie-banner');
+        const cookieModal = document.getElementById('cookie-modal');
+        const acceptAllBtn = document.getElementById('accept-all-cookies');
+        const rejectAllBtn = document.getElementById('reject-all-cookies');
+        const configureBtn = document.getElementById('configure-cookies');
+        const closeModalBtn = document.getElementById('close-cookie-modal');
+        const saveSettingsBtn = document.getElementById('save-cookie-settings');
+        const acceptAllModalBtn = document.getElementById('accept-all-modal');
+        const rejectAllModalBtn = document.getElementById('reject-all-modal');
+
+        function hasUserConsented() {
+            return localStorage.getItem('cookieConsent') !== null;
+        }
+
+        function showCookieBanner() {
+            if (!hasUserConsented()) {
+                setTimeout(() => {
+                    cookieBanner.classList.remove('translate-y-full');
+                }, 1000);
+            }
+        }
+
+        function hideCookieBanner() {
+            cookieBanner.classList.add('translate-y-full');
+        }
+
+        function saveCookiePreferences(essential = true, analytics = false, functional = false, marketing = false) {
+            const preferences = {
+                essential: essential,
+                analytics: analytics,
+                functional: functional,
+                marketing: marketing,
+                timestamp: new Date().toISOString()
+            };
+            
+            localStorage.setItem('cookieConsent', JSON.stringify(preferences));
+            hideCookieBanner();
+            
+            console.log('Cookie preferences saved:', preferences);
+        }
+
+        function acceptAllCookies() {
+            saveCookiePreferences(true, true, true, true);
+        }
+
+        function rejectAllCookies() {
+            saveCookiePreferences(true, false, false, false);
+        }
+
+        function saveCustomSettings() {
+            const analytics = document.getElementById('analytics-cookies').checked;
+            const functional = document.getElementById('functional-cookies').checked;
+            const marketing = document.getElementById('marketing-cookies').checked;
+            
+            saveCookiePreferences(true, analytics, functional, marketing);
+            hideCookieModal();
+        }
+
+        function showCookieModal() {
+            cookieModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideCookieModal() {
+            cookieModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        acceptAllBtn.addEventListener('click', acceptAllCookies);
+        rejectAllBtn.addEventListener('click', rejectAllCookies);
+        configureBtn.addEventListener('click', showCookieModal);
+        closeModalBtn.addEventListener('click', hideCookieModal);
+        saveSettingsBtn.addEventListener('click', saveCustomSettings);
+        acceptAllModalBtn.addEventListener('click', function() {
+            acceptAllCookies();
+            hideCookieModal();
+        });
+        rejectAllModalBtn.addEventListener('click', function() {
+            rejectAllCookies();
+            hideCookieModal();
+        });
+        
+        document.getElementById('cookie-preferences-link').addEventListener('click', function() {
+            showCookieModal();
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent) {
+                const preferences = JSON.parse(consent);
+                document.getElementById('analytics-cookies').checked = preferences.analytics || false;
+                document.getElementById('functional-cookies').checked = preferences.functional || false;
+                document.getElementById('marketing-cookies').checked = preferences.marketing || false;
+            }
+        });
+
+        cookieModal.addEventListener('click', function(e) {
+            if (e.target === cookieModal) {
+                hideCookieModal();
+            }
+        });
+
+        showCookieBanner();
+    </script>
+</body>
+</html> 

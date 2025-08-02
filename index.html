@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehimovil - Consulta tu vehículo sin complicaciones</title>
+    <title>Vehimovil - Revisa tu vehículo sin complicaciones</title>
     <meta name="description" content="Revisa multas, restricciones y estado administrativo de tu vehículo. Servicio privado sin filas ni trámites presenciales.">
     <link rel="stylesheet" href="dist/output.css">
 </head>
 <body class="font-sans">
-    <!-- Header -->
     <header class="bg-primary text-white py-4">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex justify-between items-center">
                 <div class="text-xl sm:text-2xl font-bold">Vehimovil</div>
                 
-                <!-- Menu Button (Always visible) -->
                 <button id="mobile-menu-button" class="text-white hover:text-accent-yellow transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -22,18 +20,35 @@
                 </button>
             </nav>
 
-            <!-- Menu (Always hidden by default) -->
-            <div id="mobile-menu" class="hidden mt-4 pb-4 border-t border-white/20">
-                <div class="flex flex-col space-y-3 pt-4">
-                    <a href="#servicios" class="hover:text-accent-yellow transition-colors py-2">Servicios</a>
-                    <a href="#como-trabajamos" class="hover:text-accent-yellow transition-colors py-2">Cómo trabajamos</a>
-                    <a href="contacto.html" class="hover:text-accent-yellow transition-colors py-2">Contacto</a>
-                </div>
-            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 right-0 bg-primary text-white z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center mb-4">
+                <div class="text-xl sm:text-2xl font-bold">Vehimovil</div>
+                <button id="mobile-menu-close" class="text-white hover:text-accent-yellow transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-3 pt-4 border-t border-white/20">
+                <a href="#servicios" class="hover:text-accent-yellow transition-colors py-2">Servicios</a>
+                <a href="#como-trabajamos" class="hover:text-accent-yellow transition-colors py-2">Cómo trabajamos</a>
+                <a href="contacto.html" class="hover:text-accent-yellow transition-colors py-2">Contacto</a>
+                <a href="sobre-nosotros.html" class="hover:text-accent-yellow transition-colors py-2">Sobre nosotros</a>
+                <a href="politica-privacidad.html" class="hover:text-accent-yellow transition-colors py-2">Política de privacidad</a>
+                <a href="aviso-legal.html" class="hover:text-accent-yellow transition-colors py-2">Aviso legal</a>
+                <a href="terminos-condiciones.html" class="hover:text-accent-yellow transition-colors py-2">Términos y condiciones</a>
+                <a href="politica-cookies.html" class="hover:text-accent-yellow transition-colors py-2">Política de cookies</a>
+                <a href="politica-reembolso.html" class="hover:text-accent-yellow transition-colors py-2">Política de reembolso</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </header>
+
     <section class="bg-primary text-white py-12 sm:py-16 lg:py-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -57,7 +72,6 @@
         </div>
     </section>
 
-    <!-- ¿Quiénes somos? -->
     <section class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto">
@@ -87,7 +101,6 @@
                     </p>
                 </div>
                 
-                <!-- Call to Action Cards -->
                 <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                     <div class="bg-accent-yellow/10 rounded-xl p-4 sm:p-6 border border-accent-yellow/20 hover:bg-accent-yellow/20 transition-colors duration-200">
                         <h3 class="text-base sm:text-lg font-bold mb-3 text-primary">¿Quieres saber más sobre cómo trabajamos?</h3>
@@ -113,7 +126,6 @@
         </div>
     </section>
 
-    <!-- ¿Qué puedes esperar del servicio? -->
     <section id="como-trabajamos" class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-primary">
@@ -121,7 +133,6 @@
             </h2>
             
             <div class="space-y-8 sm:space-y-12 lg:space-y-16">
-                <!-- Etapa 1 -->
                 <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
                     <div class="text-center">
                         <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Tratamos tus datos con responsabilidad</h3>
@@ -134,7 +145,6 @@
                     </div>
                 </div>
 
-                <!-- Etapa 2 -->
                 <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
                     <div class="order-2 lg:order-1 flex justify-center">
                         <img src="images/etapa-revision-manual.svg" alt="Revisión manual" class="w-40 h-30 sm:w-48 sm:h-36 md:w-64 md:h-48 object-cover rounded-xl">
@@ -147,7 +157,6 @@
                     </div>
                 </div>
 
-                <!-- Etapa 3 -->
                 <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
                     <div class="text-center">
                         <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Gestión a tu nombre con claridad</h3>
@@ -160,7 +169,6 @@
                     </div>
                 </div>
 
-                <!-- Etapa 4 -->
                 <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
                     <div class="order-2 lg:order-1 flex justify-center">
                         <img src="images/etapa-entrega-digital.svg" alt="Entrega digital" class="w-40 h-30 sm:w-48 sm:h-36 md:w-64 md:h-48 object-cover rounded-xl">
@@ -176,11 +184,9 @@
         </div>
     </section>
 
-    <!-- ¿Qué nos hace diferentes? -->
     <section class="py-12 sm:py-16 lg:py-20 bg-background-light">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
             
-            <!-- Блок 1: Полноформатный текст -->
             <div class="mb-12 sm:mb-16 lg:mb-20">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-12 text-primary">
                     ¿Por qué confiar en nosotros?
@@ -204,7 +210,6 @@
                 </div>
             </div>
 
-            <!-- Блок 2: Dos beneficios juntos -->
             <div class="mb-12 sm:mb-16 lg:mb-20">
                 <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                     <div class="text-center lg:text-left">
@@ -227,16 +232,15 @@
                 </div>
             </div>
 
-            <!-- Блок 3: Beneficio final -->
             <div>
                 <div class="text-center mb-6 sm:mb-8 lg:mb-12">
                     <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-primary">
                         Pagas solo si gestionamos algo completo para ti
                     </h3>
                     <div class="prose prose-lg max-w-none">
-                        <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-3 sm:mb-4">
-                            No cobramos por consultas básicas ni por darte información general. Solo si decides que gestionemos un trámite completo en tu nombre, te daremos el costo final antes de iniciar.
-                        </p>
+                                            <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-3 sm:mb-4">
+                        No cobramos por revisiones básicas ni por darte información general. Solo si decides que gestionemos un trámite completo en tu nombre, te daremos el costo final antes de iniciar.
+                    </p>
                         <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
                             Sin sorpresas, sin cobros ocultos. Así tienes control total desde el inicio.
                         </p>
@@ -251,7 +255,6 @@
         </div>
     </section>
 
-    <!-- Servicios - Cada uno en su propia sección -->
     <section id="servicios" class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-primary">
@@ -260,7 +263,6 @@
         </div>
     </section>
 
-    <!-- Servicio 1: Consulta de Multas -->
     <section class="py-12 sm:py-16 lg:py-20 bg-background-light">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
@@ -274,7 +276,7 @@
                     <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
                         Muchos conductores ni saben que tienen multas vigentes. Nosotros revisamos y te entregamos los resultados.
                     </p>
-                    <a href="multas.html" class="btn-primary text-base sm:text-lg w-full sm:w-auto">Consultar posibles multas</a>
+                    <a href="multas.html" class="btn-primary text-base sm:text-lg w-full sm:w-auto">Revisar posibles multas</a>
                 </div>
                 <div class="flex justify-center">
                     <img src="images/servicio-verificar-multas.svg" alt="Verificar multas" class="w-48 h-36 sm:w-64 sm:h-48 md:w-80 md:h-60 object-cover rounded-xl">
@@ -283,7 +285,6 @@
         </div>
     </section>
 
-    <!-- Servicio 2: Verificación de Restricciones -->
     <section class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
@@ -306,7 +307,6 @@
         </div>
     </section>
 
-    <!-- Servicio 3: Opciones de Pago -->
     <section class="py-12 sm:py-16 lg:py-20 bg-background-light">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
@@ -329,7 +329,6 @@
         </div>
     </section>
 
-    <!-- ¿No ves el servicio que necesitas? -->
     <section class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-2xl mx-auto text-center">
@@ -347,7 +346,6 @@
         </div>
     </section>
 
-    <!-- Lo que dicen nuestros usuarios -->
     <section class="py-12 sm:py-16 lg:py-20 bg-background-light">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-primary">
@@ -355,16 +353,14 @@
             </h2>
             
             <div class="max-w-4xl mx-auto relative">
-                <!-- Slider Container -->
                 <div id="testimonials-slider" class="relative overflow-hidden">
                     <div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out">
                         
-                        <!-- Testimonial 1 -->
                         <div class="testimonial-slide w-full flex-shrink-0">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
                                 <img src="images/avatar1.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
                                 <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">María González</h3>
-                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Consulta de multas</p>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Revisión de multas</p>
                                 <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
                                     "Todo fue claro desde el inicio. Me explicaron paso a paso qué necesitaban y en cuánto tiempo tendría los resultados. No tuve que preocuparme por nada."
                                 </p>
@@ -372,7 +368,6 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 2 -->
                         <div class="testimonial-slide w-full flex-shrink-0">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
                                 <img src="images/avatar2.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
@@ -385,7 +380,6 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 3 -->
                         <div class="testimonial-slide w-full flex-shrink-0">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
                                 <img src="images/avatar3.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
@@ -398,12 +392,11 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 4 -->
                         <div class="testimonial-slide w-full flex-shrink-0">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
                                 <img src="images/avatar4.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
                                 <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Luis Hernández</h3>
-                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Consulta general</p>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Revisión general</p>
                                 <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
                                     "Proceso muy sencillo. Desde mi casa pude resolver todo lo que necesitaba. La comunicación fue clara y los resultados llegaron a tiempo."
                                 </p>
@@ -411,7 +404,6 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 5 -->
                         <div class="testimonial-slide w-full flex-shrink-0">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
                                 <img src="images/avatar5.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
@@ -424,12 +416,11 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 6 -->
                         <div class="testimonial-slide w-full flex-shrink-0">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
                                 <img src="images/avatar6.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
                                 <h3 class="text-base sm:text-lg font-bold mb-2 text-primary">Patricia Silva</h3>
-                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Consulta de multas</p>
+                                <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">Revisión de multas</p>
                                 <p class="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
                                     "Todo muy profesional. No tuve que salir de casa para nada. Los resultados llegaron por email tal como me dijeron. Muy recomendable."
                                 </p>
@@ -437,7 +428,6 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 7 -->
                         <div class="testimonial-slide w-full flex-shrink-0">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
                                 <img src="images/avatar7.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
@@ -450,7 +440,6 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 8 -->
                         <div class="testimonial-slide w-full flex-shrink-0">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-center">
                                 <img src="images/avatar8.webp" alt="Usuario" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-4 sm:mb-6 object-cover">
@@ -466,7 +455,6 @@
                     </div>
                 </div>
 
-                <!-- Navigation Arrows -->
                 <button id="prev-btn" class="absolute left-2 sm:left-4 top-1/3 sm:top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary p-1.5 sm:p-2 rounded-full shadow-lg transition-all duration-200 z-10">
                     <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -478,7 +466,6 @@
                     </svg>
                 </button>
 
-                <!-- Dots Indicator -->
                 <div class="flex justify-center mt-6 sm:mt-8 space-x-1.5 sm:space-x-2">
                     <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent-yellow rounded-full dot-indicator active"></div>
                     <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full dot-indicator"></div>
@@ -493,23 +480,176 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-primary text-white py-8 sm:py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
+            <div class="text-center mb-8 sm:mb-12">
                 <div class="text-lg sm:text-xl md:text-2xl font-bold mb-4">Vehimovil</div>
-                <p class="text-xs sm:text-sm md:text-base text-gray-300 mb-6 max-w-2xl mx-auto">
-                    Servicio privado. No afiliado a ninguna entidad pública. No emitimos documentos oficiales: ayudamos a obtenerlos a través de los medios legales correspondientes.
+                <p class="text-sm text-gray-400 max-w-2xl mx-auto">
+                    Vehimóvil es una empresa privada de asistencia digital. No somos parte del gobierno. Ofrecemos ayuda informativa para simplificar tus gestiones.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6">
-                    <a href="multas.html" class="hover:text-accent-yellow transition-colors text-sm sm:text-base">Multas</a>
-                    <a href="restricciones.html" class="hover:text-accent-yellow transition-colors text-sm sm:text-base">Restricciones</a>
-                    <a href="convenios.html" class="hover:text-accent-yellow transition-colors text-sm sm:text-base">Convenios</a>
-                    <a href="contacto.html" class="hover:text-accent-yellow transition-colors text-sm sm:text-base">Contacto</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-8">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg mb-4">Información</h3>
+                    <ul class="space-y-2">
+                        <li><a href="sobre-nosotros.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Sobre nosotros</a></li>
+                        <li><a href="contacto.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Contacto</a></li>
+                    </ul>
                 </div>
+
+                <div class="text-center">
+                    <h3 class="font-bold text-lg mb-4">Políticas legales</h3>
+                    <ul class="space-y-2">
+                        <li><a href="politica-privacidad.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Política de privacidad</a></li>
+                        <li><a href="aviso-legal.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Aviso legal</a></li>
+                        <li><a href="terminos-condiciones.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Términos y condiciones</a></li>
+                        <li><a href="politica-cookies.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Política de cookies</a></li>
+                        <li><a href="politica-reembolso.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Política de reembolso</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-center">
+                    <h3 class="font-bold text-lg mb-4">Servicios populares</h3>
+                    <ul class="space-y-2">
+                        <li><a href="multas.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Revisión de multas</a></li>
+                        <li><a href="restricciones.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Revisión para venta de auto</a></li>
+                        <li><a href="convenios.html" class="text-gray-300 hover:text-accent-yellow transition-colors">Opciones de pago en multas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mb-8">
+                <p class="text-sm text-gray-400">
+                    ¿Tienes dudas? Escríbenos a <a href="mailto:about@vehimovil.com" class="underline text-white hover:text-accent-yellow transition-colors">about@vehimovil.com</a> o llama al <a href="tel:+525523879230" class="underline text-white hover:text-accent-yellow transition-colors">+52 55 2387 9230</a>.
+                </p>
+            </div>
+
+            <div class="text-center mb-6">
+                <button id="cookie-preferences-link" class="text-sm text-gray-400 hover:text-accent-yellow transition-colors">Preferencias de cookies</button>
+            </div>
+
+            <div class="border-t border-gray-700 pt-6">
+                <p class="text-xs text-gray-500 text-center">
+                    © 2025 Vehimóvil. Todos los derechos reservados. Esta es una empresa privada sin relación con entidades gubernamentales.
+                </p>
             </div>
         </div>
     </footer>
+
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-primary text-white p-3 sm:p-4 md:p-6 z-50 transform translate-y-full transition-transform duration-300 ease-in-out shadow-2xl">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 sm:gap-6">
+                <div class="flex-1">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Configuración de cookies</h3>
+                    <div class="space-y-2 sm:space-y-3 text-xs sm:text-sm text-gray-200 leading-relaxed">
+                        <p>
+                            Este sitio web utiliza cookies propias y de terceros para garantizar su correcto funcionamiento, personalizar la experiencia del usuario, analizar el tráfico web y ofrecer servicios adaptados a tus intereses. Algunas cookies son estrictamente necesarias para permitir funcionalidades básicas del sitio, como la navegación segura y el acceso a áreas protegidas. Estas cookies no pueden ser desactivadas.
+                        </p>
+                        <p>
+                            Con tu consentimiento, también utilizamos cookies opcionales para mejorar el rendimiento, analizar estadísticas de uso, recordar tus preferencias, ofrecer contenido personalizado y mostrar anuncios relacionados con tus intereses. Estas cookies solo se almacenarán en tu dispositivo si así lo autorizas expresamente.
+                        </p>
+                        <p>
+                            Puedes aceptar todas las cookies, rechazarlas o configurar tus preferencias en cualquier momento. Tu decisión no afectará negativamente al acceso al sitio, aunque ciertas funciones podrían no estar disponibles sin el uso de cookies opcionales.
+                        </p>
+                        <p>
+                            Nos comprometemos a no compartir tus datos con terceros para fines comerciales sin tu autorización. Para más información detallada sobre cada categoría de cookies y cómo las utilizamos, revisa nuestra <a href="politica-privacidad.html" class="text-accent-yellow hover:text-yellow-300 underline font-medium">Política de Privacidad</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 sm:gap-3 lg:flex-shrink-0 lg:flex-col lg:gap-3">
+                    <button id="accept-all-cookies" class="btn-primary text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 font-medium">Aceptar todas</button>
+                    <button id="reject-all-cookies" class="bg-gray-600 hover:bg-gray-700 text-white text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors font-medium">Rechazar todas</button>
+                    <button id="configure-cookies" class="border-2 border-accent-yellow text-accent-yellow hover:bg-accent-yellow hover:text-primary text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors font-medium">Configurar preferencias</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-2 sm:p-4">
+            <div class="bg-white text-primary rounded-xl shadow-2xl max-w-3xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
+                <div class="p-4 sm:p-6 md:p-8">
+                    <div class="flex justify-between items-start mb-6 sm:mb-8">
+                        <div class="flex-1">
+                            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Gestiona tus preferencias de cookies</h2>
+                            <p class="text-gray-600 text-sm sm:text-base">
+                                Puedes decidir qué tipo de cookies permitir. Tu consentimiento se puede modificar en cualquier momento desde esta sección.
+                            </p>
+                        </div>
+                        <button id="close-cookie-modal" class="text-gray-500 hover:text-gray-700 text-2xl sm:text-3xl p-2 ml-2">&times;</button>
+                    </div>
+                    
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="border-2 border-gray-200 rounded-lg p-4 sm:p-6 bg-gray-50">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4">
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Cookies estrictamente necesarias</h3>
+                                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                        Estas cookies son esenciales para el funcionamiento del sitio web. No se pueden desactivar en nuestros sistemas y no requieren consentimiento.
+                                    </p>
+                                </div>
+                                <div class="flex items-center sm:ml-4">
+                                    <span class="text-green-600 text-xs sm:text-sm font-bold bg-green-100 px-2 sm:px-3 py-1 rounded-full">✓ Siempre activas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-gray-200 rounded-lg p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4">
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Cookies de análisis</h3>
+                                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                        Nos permiten entender cómo los usuarios interactúan con el sitio web para mejorar nuestros servicios y rendimiento.
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer sm:ml-4">
+                                    <input type="checkbox" id="analytics-cookies" class="sr-only peer">
+                                    <div class="w-11 h-6 sm:w-12 sm:h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent-yellow/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 sm:after:h-6 after:w-5 sm:after:w-6 after:transition-all peer-checked:bg-accent-yellow"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-gray-200 rounded-lg p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4">
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Cookies funcionales</h3>
+                                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                        Permiten recordar tus elecciones (idioma, región, etc.) y ofrecer funciones mejoradas y personalizadas.
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer sm:ml-4">
+                                    <input type="checkbox" id="functional-cookies" class="sr-only peer">
+                                    <div class="w-11 h-6 sm:w-12 sm:h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent-yellow/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 sm:after:h-6 after:w-5 sm:after:w-6 after:transition-all peer-checked:bg-accent-yellow"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-gray-200 rounded-lg p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4">
+                                <div class="flex-1">
+                                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Cookies de publicidad y personalización</h3>
+                                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                        Utilizadas para mostrar anuncios relevantes para ti y tus intereses. No compartimos datos personales sin tu consentimiento.
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer sm:ml-4">
+                                    <input type="checkbox" id="marketing-cookies" class="sr-only peer">
+                                    <div class="w-11 h-6 sm:w-12 sm:h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent-yellow/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 sm:after:h-6 after:w-5 sm:after:w-6 after:transition-all peer-checked:bg-accent-yellow"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
+                        <button id="save-cookie-settings" class="btn-primary text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 font-medium">Guardar configuración</button>
+                        <button id="accept-all-modal" class="bg-accent-yellow text-primary text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-yellow-400 transition-colors font-medium">Aceptar todas</button>
+                        <button id="reject-all-modal" class="bg-gray-600 text-white text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-700 transition-colors font-medium">Rechazar todas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         function scrollToSection(sectionId) {
@@ -518,20 +658,21 @@
             });
         }
 
-        // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when clicking on a link
+        document.getElementById('mobile-menu-close').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', function() {
                 document.getElementById('mobile-menu').classList.add('hidden');
             });
         });
 
-        // Testimonials Slider
         let currentSlide = 0;
         const slides = document.querySelectorAll('.testimonial-slide');
         const track = document.getElementById('testimonials-track');
@@ -543,7 +684,6 @@
         function updateSlider() {
             track.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            // Update dots
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlide);
                 dot.classList.toggle('bg-accent-yellow', index === currentSlide);
@@ -562,14 +702,13 @@
         }
 
         function startAutoSlide() {
-            autoSlideInterval = setInterval(nextSlide, 4500); // 4.5 seconds
+            autoSlideInterval = setInterval(nextSlide, 4500);
         }
 
         function stopAutoSlide() {
             clearInterval(autoSlideInterval);
         }
 
-        // Event listeners
         prevBtn.addEventListener('click', () => {
             prevSlide();
             stopAutoSlide();
@@ -582,7 +721,6 @@
             startAutoSlide();
         });
 
-        // Dot navigation
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 currentSlide = index;
@@ -592,13 +730,114 @@
             });
         });
 
-        // Start auto-slide
         startAutoSlide();
 
-        // Pause on hover
         const slider = document.getElementById('testimonials-slider');
         slider.addEventListener('mouseenter', stopAutoSlide);
         slider.addEventListener('mouseleave', startAutoSlide);
+
+        const cookieBanner = document.getElementById('cookie-banner');
+        const cookieModal = document.getElementById('cookie-modal');
+        const acceptAllBtn = document.getElementById('accept-all-cookies');
+        const rejectAllBtn = document.getElementById('reject-all-cookies');
+        const configureBtn = document.getElementById('configure-cookies');
+        const closeModalBtn = document.getElementById('close-cookie-modal');
+        const saveSettingsBtn = document.getElementById('save-cookie-settings');
+        const acceptAllModalBtn = document.getElementById('accept-all-modal');
+        const rejectAllModalBtn = document.getElementById('reject-all-modal');
+
+        function hasUserConsented() {
+            return localStorage.getItem('cookieConsent') !== null;
+        }
+
+        function showCookieBanner() {
+            if (!hasUserConsented()) {
+                setTimeout(() => {
+                    cookieBanner.classList.remove('translate-y-full');
+                }, 1000);
+            }
+        }
+
+        function hideCookieBanner() {
+            cookieBanner.classList.add('translate-y-full');
+        }
+
+        function saveCookiePreferences(essential = true, analytics = false, functional = false, marketing = false) {
+            const preferences = {
+                essential: essential,
+                analytics: analytics,
+                functional: functional,
+                marketing: marketing,
+                timestamp: new Date().toISOString()
+            };
+            
+            localStorage.setItem('cookieConsent', JSON.stringify(preferences));
+            hideCookieBanner();
+            
+            console.log('Cookie preferences saved:', preferences);
+        }
+
+        function acceptAllCookies() {
+            saveCookiePreferences(true, true, true, true);
+            hideCookieModal();
+        }
+
+        function rejectAllCookies() {
+            saveCookiePreferences(true, false, false, false);
+            hideCookieModal();
+        }
+
+        function saveCustomSettings() {
+            const analytics = document.getElementById('analytics-cookies').checked;
+            const functional = document.getElementById('functional-cookies').checked;
+            const marketing = document.getElementById('marketing-cookies').checked;
+            
+            saveCookiePreferences(true, analytics, functional, marketing);
+            hideCookieModal();
+        }
+
+        function showCookieModal() {
+            cookieModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideCookieModal() {
+            cookieModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        acceptAllBtn.addEventListener('click', acceptAllCookies);
+        rejectAllBtn.addEventListener('click', rejectAllCookies);
+        configureBtn.addEventListener('click', showCookieModal);
+        closeModalBtn.addEventListener('click', hideCookieModal);
+        saveSettingsBtn.addEventListener('click', saveCustomSettings);
+        acceptAllModalBtn.addEventListener('click', function() {
+            acceptAllCookies();
+            hideCookieModal();
+        });
+        rejectAllModalBtn.addEventListener('click', function() {
+            rejectAllCookies();
+            hideCookieModal();
+        });
+        
+        document.getElementById('cookie-preferences-link').addEventListener('click', function() {
+            showCookieModal();
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent) {
+                const preferences = JSON.parse(consent);
+                document.getElementById('analytics-cookies').checked = preferences.analytics || false;
+                document.getElementById('functional-cookies').checked = preferences.functional || false;
+                document.getElementById('marketing-cookies').checked = preferences.marketing || false;
+            }
+        });
+
+        cookieModal.addEventListener('click', function(e) {
+            if (e.target === cookieModal) {
+                hideCookieModal();
+            }
+        });
+
+        showCookieBanner();
     </script>
 </body>
 </html> 
