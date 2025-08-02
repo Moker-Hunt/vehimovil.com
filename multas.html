@@ -6,6 +6,12 @@
     <title>Revisión de Multas - Vehimovil</title>
     <meta name="description" content="Revisa si tienes multas pendientes en tu vehículo. Servicio privado de asistencia digital sin filas ni trámites presenciales.">
     <link rel="stylesheet" href="dist/output.css">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 <body class="font-sans">
     <header class="bg-primary text-white py-4">
@@ -108,7 +114,7 @@
 
                 <div class="bg-white border border-gray-200 rounded-xl p-6 sm:p-8">
                     <h2 class="text-2xl font-bold text-primary mb-6">Solicitar revisión</h2>
-                    <form id="multas-form" class="space-y-4">
+                    <form id="multas-form" action="sendmail.php" method="POST" class="space-y-4" novalidate>
                         <div>
                             <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre completo *</label>
                             <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-yellow focus:border-transparent">
@@ -256,7 +262,7 @@
 
             <div class="text-center mb-8">
                 <p class="text-sm text-gray-400">
-                    ¿Tienes dudas? Escríbenos a <a href="mailto:about@vehimovil.com" class="underline text-white hover:text-accent-yellow transition-colors">about@vehimovil.com</a> o llama al <a href="tel:+525523879230" class="underline text-white hover:text-accent-yellow transition-colors">+52 55 2387 9230</a>.
+                    ¿Tienes dudas? Escríbenos a <a href="mailto:contacto@vehimovil.com" class="underline text-white hover:text-accent-yellow transition-colors">contacto@vehimovil.com</a> o llama al <a href="tel:+525523879230" class="underline text-white hover:text-accent-yellow transition-colors">+52 55 2387 9230</a>.
                 </p>
             </div>
 
@@ -511,62 +517,48 @@
         const successMessage = document.getElementById('success-message');
         const submitBtn = document.getElementById('submit-btn');
 
-        multasForm.addEventListener('submit', async function(e) {
+        multasForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Validación personalizada en español
+            const nombre = document.getElementById('nombre').value.trim();
+            const placas = document.getElementById('placas').value.trim();
+            const email = document.getElementById('email').value.trim();
+            
+            let isValid = true;
+            let errorMessage = '';
+            
+            // Validar nombre
+            if (!nombre) {
+                isValid = false;
+                errorMessage = 'Por favor, ingresa tu nombre completo.';
+            }
+            // Validar placas
+            else if (!placas) {
+                isValid = false;
+                errorMessage = 'Por favor, ingresa las placas del vehículo.';
+            }
+            // Validar email
+            else if (!email) {
+                isValid = false;
+                errorMessage = 'Por favor, ingresa tu correo electrónico.';
+            }
+            else if (!email.includes('@')) {
+                isValid = false;
+                errorMessage = 'Por favor, ingresa un correo electrónico válido.';
+            }
+            
+            if (!isValid) {
+                alert(errorMessage);
+                return;
+            }
             
             // Disable submit button to prevent double submission
             submitBtn.disabled = true;
             submitBtn.textContent = 'Enviando...';
             
-            try {
-                                // Get form data
-                const formData = new FormData(multasForm);
-                const data = {
-                    nombre: formData.get('nombre'),
-                    placas: formData.get('placas'),
-                    email: formData.get('email'),
-                    telefono: formData.get('telefono'),
-                    comentarios: formData.get('comentarios'),
-                    servicio: 'Revisión de Multas',
-                    fecha: new Date().toISOString()
-                };
-
-                // Send form data to PHP script
-                const formDataToSend = new FormData();
-                formDataToSend.append('nombre', data.nombre);
-                formDataToSend.append('placas', data.placas);
-                formDataToSend.append('email', data.email);
-                formDataToSend.append('telefono', data.telefono || '');
-                formDataToSend.append('comentarios', data.comentarios || '');
-                
-                const response = await fetch('send_email.php', {
-                    method: 'POST',
-                    body: formDataToSend
-                });
-                
-                const result = await response.json();
-                
-                if (!response.ok) {
-                    throw new Error(result.error || 'Failed to send email');
-                }
-                
-                console.log('Email sent successfully:', result);
-                
-                // Show success message
-                multasForm.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-                
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth' });
-                
-            } catch (error) {
-                console.error('Error sending form:', error);
-                alert('Hubo un error al enviar tu solicitud. Por favor, intenta nuevamente o contacta directamente a contacto@vehimovil.com');
-                
-                // Re-enable submit button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Solicitar revisión ahora';
-            }
+            // Submit the form
+            multasForm.submit();
         });
     </script>
 </body>
